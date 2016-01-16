@@ -3,14 +3,13 @@ import UnityEngine.UI;
 
 var prizeText: Text;
 var playerScore : int;
-var winScreen: Game0bject;
+var winScreen: GameObject;
 
 function Update(){
-{
 prizeText.text = playerScore.ToString("0");
 }
 
-function OnTriggerEnter(other : Collider)
+function OnTriggerEnter(other : Collider){
 
 			
 			
@@ -25,11 +24,10 @@ function OnTriggerEnter(other : Collider)
 	}
 }
 
-function OnCollisionEnter(the Collison: Collider)
-{
-	if(theCollison.transform.tag == "win"
+function OnCollisionEnter(theCollison : Collision){
+	if(theCollison.transform.tag == "win")
 	{
 	print("WINNER"); 
 	winScreen.SetActive(true);
-	if(OTHER.TAG == "win"
-	}			}
+	}			
+}
